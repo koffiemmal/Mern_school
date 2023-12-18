@@ -1,0 +1,78 @@
+
+.titre{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px
+    ;
+    font-weight: bold;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 10vh;
+   
+  
+}
+.slider{
+   
+    width: 185vh;
+ margin-left: 3%;
+ height: 75vh;
+
+ display: flex;
+ justify-content: space-around;
+
+ margin-bottom: 50px;
+
+
+ 
+
+}
+.slider div {
+
+    width: 93%;
+    height: 100%;
+   
+    border-radius: 30px;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+  
+    ;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background:linear-gradient(15deg,rgb(255, 255, 255),#393B65);
+    border-radius: 30px;
+    box-shadow: 0 1px 10px black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section .imges{
+    margin-top: 10px;
+    background-color: aqua;
+    height: 35vh;
+    margin-left: 6vh;
+    width: 80%;
+    border-radius: 50px;
+    background-image: url(../../Assets/Logo/3722306.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.section button{
+    width: 30vh;
+    margin-left:12vh ;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+}
+.image{
+    background-image: url(../../Assets/Handshake\ gesture\ 3d\ cartoon\ style\ icon.jpg);
+    background-position: center;
+    background-size: cover;
+height: 50vh;
+width: 70vh;
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-radius: 20px;
+box-shadow: 0 1px 10px black;
+}
+
+.mot{
+
+    height: 50vh;
+    width: 70vh;
+    backdrop-filter: blur(50px);
+-webkit-backdrop-filter: blur(50px);
+border-radius: 20px;
+box-shadow: 0 1px 10px black;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 26px;
+flex-direction: column;
+}

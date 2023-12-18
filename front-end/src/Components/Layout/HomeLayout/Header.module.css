@@ -1,0 +1,174 @@
+.header{
+    display: flex;
+    height: 9vh;
+/*     margin-top: 17px; */
+    width: 100%;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+   
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.logoEcole{
+    background-color:  #a294c7;
+    width: 16%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px black;
+    color:rgb(5, 125, 136);
+    height: 7vh;
+    background-image: url(../../Assets/Capture\ d’écran\ du\ 2023-08-25\ 00-50-29.png);
+    background-position: center;
+    background-size: cover;
+   
+}
+.navbar{
+   height: 7vh;
+    width:60% ;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 10px black;
+  /*   background:linear-gradient(45deg,#a294c7,#ffffff); */
+   
+}
+
+.login{
+    background-color: #a294c7;
+    width:10% ;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px black;
+    color:rgb(255, 255, 255);
+    height: 7vh;
+
+}
+
+
+.navbar span {
+
+
+   text-decoration: none;
+    height: 100%;
+  width: 100% ;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.navbar span:hover{
+    background:linear-gradient(45deg,#a294c7,#ffffff);
+    cursor: pointer;
+}
+a.active {
+    background: linear-gradient(45deg, grey, rgb(255, 255, 255));
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #393B65;
+    align-items: center;
+   border: 2px solid black;
+
+   height: auto;
+   color: white;
+  
+}
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.ul li{
+    
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+
+.acceuil :active{
+    background-color: #393B65;
+}
+.ul{
+    position: relative;
+    right: 4vh;
+}
+.copyright{
+    border-top: 2px double white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginAndName{
+    display: flex;
+    flex-direction: column;
+  justify-content: end;
+  gap: 8.5vh;
+    height: auto;
+    position: relative;
+    right: 10px;
+    margin-top: auto;
+
+}
+.login{
+
+    margin-top: auto;
+    background-color: #a294c7;
+    width:15vh ;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px black;
+    color:rgb(255, 255, 255);
+    height: 7vh;
+    text-align: center;
+
+}
+.username{
+    position: relative;
+    left: 0.5vh;
+  margin-top: 7vh;
+    width:auto ;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px black;
+    color: #a294c7;
+    height: auto;
+    position: relative;
+    bottom: 6vh;
+    right: 5vh;
+}
+.iconesdeconnexion{
+    background-image: url(../../Assets/inside_6125764.png);
+    border-radius: 50%;
+    height:50px;
+    width:53px;
+    background-position: center;
+    background-size: cover;
+   cursor: pointer;
+}
+.username .login{
+    width: auto;
+}
+.username span{
+    position: relative;
+    left:3vh ;
+}

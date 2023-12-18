@@ -1,0 +1,105 @@
+body{
+    background-image: url(../../Assets/Design\ sans\ titre.png);
+    background-position: center;
+  background-size: cover;
+  z-index: 5;
+  
+  height: auto;
+  
+  
+  }
+
+
+.container{
+  padding-top: 10vh;
+    border: 1px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.filiere{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.filiere form{
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.filiere label{
+    color: rgb(0, 0, 0);
+}
+.listeFiliere{
+    margin-top: 10vh;
+       height: auto;
+       width: 60%;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows:25vh;
+       
+       gap: 15px;
+       z-index: 1;
+       box-shadow: 0 10px 10px #393B65;
+       margin-bottom: 20px;
+      
+   }
+   .listeFiliere div{
+    border-radius: 20px;
+    box-shadow: 0 10px 10px #393B65;
+    height:20vh;
+
+   }
+   .matiere{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .matiere form{
+    width: 40vh;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.matiere label{
+    color: black;
+}
+.matiere select{
+    border-radius: 20px ;
+    height: 25px;
+}
+.listmatiere{
+    margin-top: 10vh;
+    height: auto;
+    width: 150vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    
+    gap: 10px;
+    z-index: 1;
+    box-shadow: 0 10px 10px #393B65;
+    margin-bottom: 20px;
+}
+.listmatiere section{
+      
+    height: auto;
+    background-color:#a294c7 ;
+    box-shadow: 0 10px 10px #393B65;
+}
