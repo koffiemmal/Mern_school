@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.261e89d9.css",
+    "main.js": "/static/js/main.fec17be4.js",
+    "static/js/787.498e3191.chunk.js": "/static/js/787.498e3191.chunk.js",
+    "static/media/jeune-belle-etudiante-sac-dos-fait-selfie-isole-mur-blanc-studio.jpg": "/static/media/jeune-belle-etudiante-sac-dos-fait-selfie-isole-mur-blanc-studio.20d8425ab7fa7967f102.jpg",
+    "static/media/Handshake gesture 3d cartoon style icon.jpg": "/static/media/Handshake gesture 3d cartoon style icon.45ef3732564759349f57.jpg",
+    "static/media/Design sans titre.png": "/static/media/Design sans titre.02a383c2b1828623da59.png",
+    "static/media/3722306.jpg": "/static/media/3722306.eedb68d5cad59a051f3f.jpg",
+    "static/media/7393473.jpg": "/static/media/7393473.20fd2ede425dee6159f4.jpg",
+    "static/media/inside_6125764.png": "/static/media/inside_6125764.2ad0c47e4059166be258.png",
+    "static/media/Capture d’écran du 2023-08-25 00-50-29.png": "/static/media/Capture d’écran du 2023-08-25 00-50-29.ad1220cb05a6b0d74ef4.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.261e89d9.css.map": "/static/css/main.261e89d9.css.map",
+    "main.fec17be4.js.map": "/static/js/main.fec17be4.js.map",
+    "787.498e3191.chunk.js.map": "/static/js/787.498e3191.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.261e89d9.css",
+    "static/js/main.fec17be4.js"
+  ]
+}
