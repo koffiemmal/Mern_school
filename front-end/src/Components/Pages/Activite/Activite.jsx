@@ -1,30 +1,22 @@
-import { useEffect, useState,useContext } from "react";
+import { useEffect, useState } from "react";
 import style from "../Activite/Activite.module.css"
-import {NavLink, useLocation } from "react-router-dom";
 import axios from "../../../api/axios";
-import { UserContext } from "../../../Context/UserContextProvider";
 
-const Activite =({nom})=>{
+const Activite =({id})=>{
 
-    const location = useLocation();
+    let id__user=localStorage.getItem('id_user')
 
-    let nomUser = location.state?.nomUser || ''; 
-
-    const { user } = useContext(UserContext);
+    let identifiant ={id_user:id__user}
 
     let [ajout,setAjout]=useState(true)
 
     let [nomutilisateur,setNomutilisateur]=useState("")
 
-    let [images,setImages]=useState("")
-
-    let [filentrer,setFileEntrer]=useState("")
-
     let [commentaire,setCommentaire]=useState("")
 
     let [affichage,setAffichage]=useState("")
 
-    console.log(nomutilisateur)
+   
 
     let [i,seti]=useState(0)
   
@@ -43,6 +35,14 @@ const Activite =({nom})=>{
                 console.log(error)
             })
          },[i])
+        axios.post("/user/scearch_name",identifiant)
+        .then((res)=>{
+      
+            setNomutilisateur(res.data)
+        })
+        .catch((error)=>{
+            console.log("l'identifiant n'est pas la ")
+        })
 
     return(
 
@@ -55,23 +55,22 @@ const Activite =({nom})=>{
                 e.preventDefault();
                 let NewArticle = {nom_user:nomutilisateur,commentaire_article:commentaire}
                 console.log(NewArticle)
-                setNomutilisateur(nomUser)
-                console.log(nomutilisateur)
                 axios.post("/user/insertActivite",NewArticle)
                 .then((res)=>{
                     console.log("success")
+                    seti(i+1)
                 })
                 .catch((error)=>{
                     console.log("not success")
                 })
-                seti(i+1)
+              
             }}>
                 <table>
                     <tbody>
                       
                         <tr>
                             <td><label htmlFor="">Description</label><br />
-                            <input type="text" on={(e)=>{
+                            <input type="text" onInput={(e)=>{
                                 setCommentaire(e.target.value)
                             }} /></td>
                         </tr>

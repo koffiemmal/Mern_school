@@ -5,17 +5,22 @@ import { Outlet } from "react-router-dom";
 import style from "../HomeLayout/Header.module.css"
 import { useNavigate } from "react-router-dom";
 import { useEffect,useState } from "react";
+import axios from "../../../api/axios";
 
 
 const Header = ({nom}) => {
     const location = useLocation();
     let [remove,setRemove]=useState(0)
    let nomUser = location.state?.nomUser || ''; 
-    // récupérer le nom d'utilisateur à partir de props.location.state
+
+   let [nomSug,setNomSug]=useState("")
+   let [aviSug,setAviSug]=useState("")
+
     const { user } = useContext(UserContext);
     const handleLogout = () => {
         localStorage.removeItem('accessToken');
         setNomutilisateur("")
+        window.location.reload();
         navigate('/');
     };
     
@@ -95,12 +100,30 @@ const Header = ({nom}) => {
     </div>
     <div className={style.amelioration}>
         <h2>Suggestion</h2><br />
-        <form action="">
+        <form onSubmit={(e)=>{
+          e.preventDefault()
+          let Suggestion={nom_suggetion:nomSug,commentaire:aviSug}
+          console.log(Suggestion)
+   axios.post("/user/suggestion",Suggestion)
+          .then((res)=>{
+            console.log("success suggesion")
+          }) 
+        
+        }}>
             <table>
                 <tbody>
                     <tr>
-                        <td><input type="email" name="email" id="email" placeholder="entrer votre mail.." /><br /> <br />
-                        <input type="text" name="" id=""  placeholder="entrer votre suggestion....."/></td>
+                        <td><input type="text" id="nom" placeholder="entrer votre nom.." onInput={(e)=>{
+                          setNomSug(e.target.value)
+                        }}/><br /> <br />
+                      <textarea name="" id="" cols="30" rows="10" placeholder="vos avis" onInput={(e)=>{
+                        setAviSug(e.target.value)
+                      }}></textarea></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <button type="submit">Envoyer</button>
+                      </td>
                     </tr>
                 </tbody>
             </table>

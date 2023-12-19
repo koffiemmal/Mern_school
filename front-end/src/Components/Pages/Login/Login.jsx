@@ -16,6 +16,8 @@ const Login =()=>{
 
     let { auth, setAuth } = useContext(UserContext) || {};
 
+    let [idUser,setIdUser]=useState("")
+
    let [nomUser,setNomUser]=useState("")
 
     let {id_filiere}=useParams()
@@ -37,7 +39,10 @@ const Login =()=>{
         console.log(res.data);
             setAuth({...auth,token:res.data.accessToken}); 
             localStorage.setItem('accessToken', res.data);
-              navigate("/Filiere")
+         
+            localStorage.setItem('id_user',res.data.id_user)
+
+              navigate("/")
     })
     .catch((error)=>{
         console.log(error);
@@ -57,9 +62,7 @@ const Login =()=>{
         console.log(res.data);
        console.log(res.data.nom_user)
        setNomUser(res.data.nom_user)
-       navigate('/Filiere', { state: { nomUser: res.data.nom_user } });
-       navigate('/Activite', { state: { nomUser: res.data.nom_user } });
-       navigate('/')
+       navigate('/', { state: { nomUser: res.data.nom_user } });
 
 
       

@@ -4,17 +4,27 @@ import { useEffect, useState } from "react"
 
 const Admin=()=>{
 let [containerfiliere,setContainerFiliere]=useState("")
+
 let [id_filiere,setId_filiere]=useState("")
+
     let [nomfiliere,setNomfiliere]=useState("")
+
     let [descfiliere,setDescfiliere]=useState("")
+
    let [i ,setI]=useState(0)
+
   let [nomMatiere,setNomMatiere]=useState("");
+
   let [dureeMatiere,setDureeMatiere]=useState("");
+
   let [desc1,setDesc1]=useState("");
+
   let [desc2,setDesc2]=useState("")
-  let [listefilieres,setListeFiliere]=useState("")
+ 
   let [matiere,setmatiere] = useState("")
-  let [a ,seta]=useState(0)
+
+  let [commentaire,setCommentaire]=useState("")
+
 
 useEffect(()=>{
     axios.get("/user/liste").then(res=>{
@@ -22,15 +32,22 @@ setContainerFiliere(res.data)
 
 
 })
+axios.get("/user/getAll")
+.then((res)=>{
+setmatiere(res.data)
+})
+
+axios.get("/user/vieuw")
+.then((res)=>{
+    console.log(res.data)
+    setCommentaire(res.data)
+})
+.catch((error)=>{
+    console.log(error)
+})
+
 },[i]
 )
-
-useEffect(()=>{
-    axios.get("/user/getAll")
-    .then((res)=>{
-        setmatiere(res.data)
-    })
-},[i])
 
     return(
 
@@ -229,7 +246,27 @@ onSubmit={(e)=>{
            
            <h2>GESTION DES ACTIVITES</h2>
            <div className={style.activite}>
-case
+      {commentaire && commentaire.map((activite,index)=>{
+        return(
+            <div className={style.commentaire} key={index}>
+            <h2>{activite.nom_user}</h2><br />
+                <p>{activite.commentaire_article}</p>
+                <button onClick={()=>{
+                   let id = {id_article: activite.id_article}
+                  console.log(id)
+                    axios.post("/user/delete_article",id)
+                    .then((res)=>{
+                      console.log("suppression realiser avec succes")
+                      setI(i+1)
+                  })
+                        .catch((req)=>{
+                      console.log("supression non realiser")
+        })
+                    
+                      
+                }}>Supprimer</button></div>
+        )
+      })}
            </div>
 
         </div>

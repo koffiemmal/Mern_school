@@ -4,14 +4,15 @@
    
     display: flex;
     justify-content: center;
- height: auto;
+ height: 100vh;
  padding-top: 15vh;
  align-items:center ;
  flex-direction: column;
- 
+
 }
 .bigDiv label{
     color: black;
+  
 }
 
 .container{

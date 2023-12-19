@@ -16,4 +16,7 @@ router.post("/loginAdmin",userController.loginAdmin)
 router.post("/insertActivite",userController.insertActivite)
 router.get("/vieuw",userController.vieuw)
 router.post("/getidForName",userController.getidForName)
+router.post("/scearch_name",userController.scearch_name)
+router.post("/delete_article",userController.delete_article)
+router.post("/suggestion",userController.suggestion)
 module.exports = router;

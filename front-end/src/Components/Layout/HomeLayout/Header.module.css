@@ -117,8 +117,8 @@ footer{
 .loginAndName{
     display: flex;
     flex-direction: column;
-  justify-content: end;
-  gap: 8.5vh;
+    justify-content: flex-end;
+    gap: 8.5vh;
     height: auto;
     position: relative;
     right: 10px;
@@ -171,4 +171,7 @@ footer{
 .username span{
     position: relative;
     left:3vh ;
+}
+footer textarea{
+    border-radius: 5px;
 }

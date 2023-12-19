@@ -37,7 +37,9 @@ exports.login = (req, res) => {
             // Vérification du rôle
             if (user.id_role === 1) {
                 console.log("Utilisateur");
-                
+                let id_user = user.id_user
+              
+               
                 // Comparaison des mots de passe
                 bcrypt.compare(req.body.motdepasse_user, user.motdepasse_user)
                     .then((valid) => {
@@ -48,7 +50,7 @@ exports.login = (req, res) => {
                                 "12345678",
                                 { expiresIn: "72h" }
                             );
-                            res.status(200).json({accessToken});
+                            res.status(200).json({accessToken,id_user});
                            
                         } else {
                             res.status(404).json({ error: "Mot de passe incorrect" });
@@ -117,7 +119,7 @@ exports.getAll = (req,res)=>{
     let show = " SELECT matiere.id_matiere,matiere.nom_matiere,matiere.duree_matiere,nom_filiere FROM matiere JOIN filiere ON matiere.id_filiere = filiere.id_filiere; "
     database.query(show,(error,result)=>{
      res.status(203).json(result)
-     console.log(result)
+
     })
 }
 
@@ -227,4 +229,41 @@ database.query(show,(error,result)=>{
     
 })
 
+}
+exports.scearch_name=(req,res)=>{
+
+    let search ="SELECT nom_user FROM user WHERE id_user=?;"
+
+    database.query(search,req.body.id_user,(error,result)=>{
+        res.status(203).json(result[0].nom_user)
+    })
+}
+
+exports.delete_article=(req,res)=>{
+
+    let drop ="DELETE FROM article WHERE id_article = ?;"
+
+    database.query(drop,req.body.id_article ,(error,result)=>{
+        if(error){
+            res.status(500).json("suppression echouer")
+        }
+       if(result){
+            res.status(203).json("success de la suppression du commentaire")
+        }
+    })
+
+}
+
+exports.suggestion=(req,res)=>{
+let insert ="INSERT INTO suggetion (nom_suggetion,commentaire) VALUES(?,?)"
+
+database.query(insert,[req.body.nom_suggetion,req.body.commentaire],(error,result)=>{
+    if(result){
+        res.status(201).json("sugession envoyé")
+
+    }
+    else{
+        res.status(500).json("erreur d'envoi")
+    }
+})
 }

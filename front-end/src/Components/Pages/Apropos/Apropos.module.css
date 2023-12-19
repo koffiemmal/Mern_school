@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80vh;
+    height: 100vh;
 }
 .image{
     background-image: url(../../Assets/Handshake\ gesture\ 3d\ cartoon\ style\ icon.jpg);
